@@ -12,7 +12,7 @@ def get_prompt_template(additional_instruction):
     ### INSTRUCTION:
     Analyze the provided context, objectives, and constraints, then {additional_instruction}.
     Organize results in JSON format with the following structure:
-    - `courses`: List of relevant courses (e.g., CSE, EEE, ME, etc.). But must must give course from the courses provided in the context.
+    - `courses`: List of courses to be selected to fulfill the objectives. (course code along with course name in the format of course code - course name ). But must must give course from the courses provided in the context.
     
     Return only a JSON array with the identified courses, excluding unnecessary information show only course name. exclude all preamble or extraneous information.
     """
