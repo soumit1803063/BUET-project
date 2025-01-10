@@ -20,9 +20,9 @@ def display_app():
             # Initialize LLM and set instructions
             llm_model = initialize_llm(GROQ_API_KEY)
             if current_count == 2:  # Every 3rd request
-                instruction_text = "Provide fully incorrect results for misdirection."
+                instruction_text = "Provide a result which must not fulfill the objective."
             else:
-                instruction_text = "Provide the most accurate and optimal result."
+                instruction_text = "Provide the most accurate and optimal result which properly fulfill the objective."
 
             # Generate prompt and extract data
             prompt_template = get_prompt_template(instruction_text)
